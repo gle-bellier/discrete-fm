@@ -24,12 +24,22 @@ def tensor_to_numpy(tensor, dict_size):
     array = tensor.numpy().astype(np.uint8)  # Scale and convert to uint8
     return array
 
-def create_animation(tensors, output_path, fps=30, dict_size=10):
+def create_animation(tensors, output_path, duration=5, dict_size=10):
     """Create an animation from a series of tensors and save it as a video file."""
+
+    # Choose a reasonable fps, like 25
+    fps = 25
+
+    # Calculate the number of frames to use based on the desired duration and fps
+    num_frames = fps * duration
+
+    # Sample tensors to match the desired number of frames
+    sampled_indices = np.linspace(0, len(tensors) - 1, num_frames).astype(int)
+    tensors = [tensors[i] for i in sampled_indices]
 
     # tensor of shape (T B C H W)
     frames = [tensor_to_numpy(tensor, dict_size) for tensor in tensors]
-    frames += [frames[-1]] * 1000
+    frames += [frames[-1]] * fps
 
     fig, ax = plt.subplots()
     img = ax.imshow(frames[0])
@@ -39,7 +49,7 @@ def create_animation(tensors, output_path, fps=30, dict_size=10):
         img.set_data(frame)
         return [img]
 
-    ani = animation.FuncAnimation(fig, update, frames=frames, blit=True, interval=1)
+    ani = animation.FuncAnimation(fig, update, frames=frames, blit=True, interval=1/fps)
     
     # Save the animation
     Writer = animation.writers['pillow']
