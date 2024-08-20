@@ -606,17 +606,3 @@ class SongUnet(torch.nn.Module):
                 x = block(x, emb)
 
         return aux
-
-if __name__ == "__main__":
-
-    unet =  SongUnet(img_resolution = 32,  # Image resolution at input/output.
-        in_channels = 3,  # Number of color channels at input.
-        out_channels = 3,
-        model_channels= 16)  # Number of color channels at output.
-    
-    t = torch.randn(10)
-    x = torch.randn(10, 3, 32, 32)
-
-    y = unet(t, x)
-    print(y.shape)
-    print(y.sum(dim=1)) 
