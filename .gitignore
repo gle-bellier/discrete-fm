@@ -1,2 +1,3 @@
 __pycache__/
 MNIST/
+lightning_logs/
