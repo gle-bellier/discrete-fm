@@ -55,6 +55,7 @@ def create_animation(tensors, output_path, duration=5, dict_size=10):
     Writer = animation.writers['pillow']
     writer = Writer(fps=fps, metadata=dict(artist='Me'), bitrate=1800)
     ani.save(output_path, dpi=150, writer=writer)
+    plt.close(fig)
 
 
 def plot_generation(xts: List[torch.Tensor], n_plots: int = 5) -> None:
