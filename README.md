@@ -2,7 +2,7 @@
 
 _notebook by Georges Le Bellier_  - [Twitter](https://twitter.com/_lebellig), [Website](https://gle-bellier.github.io)
 
-This is an unofficial implementation of the paper made [Discrete Flow Matching](https://arxiv.org/abs/2407.15595#) by Itai Gat et al [1]. This notebook has an educational purpose and explores the case of discrete image generation. We strongly encourage the readers to check the whole framework in the original paper and we report the formula with their indexes in the paper.
+This is an unofficial implementation of the paper made [Discrete Flow Matching](https://arxiv.org/abs/2407.15595#) by Itai Gat et al [1]. This notebook (`notebook/discretefm.ipynb`) has an educational purpose and explores the case of discrete image generation. We strongly encourage the readers to check the whole framework in the original paper and we report the formula with their indexes in the paper.
 ## References:
 
 📄 [1] **Discrete Flow Matching** by Itai Gat, Tal Remez, Neta Shaul, Felix Kreuk, Ricky T. Q. Chen, Gabriel Synnaeve, Yossi Adi, Yaron Lipman - [Article](https://arxiv.org/abs/2407.15595#)
