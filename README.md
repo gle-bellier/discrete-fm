@@ -1,5 +1,7 @@
 # Discrete Flow Matching
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1BnGVmUK9hU9HVK42JbQBF2l-7rbAZ0yu?usp=sharing)
+
 _notebook by Georges Le Bellier_  - [Twitter](https://twitter.com/_lebellig), [Website](https://gle-bellier.github.io)
 
 This is an unofficial implementation of the paper made [Discrete Flow Matching](https://arxiv.org/abs/2407.15595#) by Itai Gat et al [1]. This notebook (`notebook/discretefm.ipynb`) has an educational purpose and explores the case of discrete image generation. We strongly encourage the readers to check the whole framework in the original paper and we report the formula with their indexes in the paper.
